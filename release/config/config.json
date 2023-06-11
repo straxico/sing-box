@@ -11,13 +11,33 @@
   },
   "inbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vmess",
+      "tag": "vmess-in",
       "listen": "::",
-      "listen_port": 8080,
-      "sniff": true,
-      "network": "tcp",
-      "method": "2022-blake3-aes-128-gcm",
-      "password": "8JCsPssfgS8tiRwiMlhARg=="
+      "listen_port": 443,
+      "users": [
+        {
+          "name": "mmm",
+          "uuid": "27848739-7e62-4138-9fd3-938a63964b6b",
+          "alterId": 0
+        }
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.github.com",
+        "reality": {
+          "enabled": true,
+          "handshake": {
+            "server": "www.github.com",
+            "server_port": 443
+          },
+          "private_key": "iCW3oJDGVOecb_SKGAfT52uVJJ77LRzHi2MLtcXcH0M",
+          "short_id": ["e637a7288fe573c5"]
+        }
+      },
+      "transport": {
+        "type": "http"
+      }
     }
   ],
   "outbounds": [
