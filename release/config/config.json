@@ -2,13 +2,6 @@
   "log": {
     "level": "info"
   },
-  "dns": {
-    "servers": [
-      {
-        "address": "tls://8.8.8.8"
-      }
-    ]
-  },
   "inbounds": [
     {
       "type": "vmess",
@@ -24,11 +17,11 @@
       ],
       "tls": {
         "enabled": true,
-        "server_name": "www.github.com",
+        "server_name": "speed.cloudflare.com",
         "reality": {
           "enabled": true,
           "handshake": {
-            "server": "www.github.com",
+            "server": "speed.cloudflare.com",
             "server_port": 443
           },
           "private_key": "iCW3oJDGVOecb_SKGAfT52uVJJ77LRzHi2MLtcXcH0M",
